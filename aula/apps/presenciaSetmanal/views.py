@@ -141,11 +141,12 @@ def detallgrup(request, grup_id, dataReferenciaStr=''):
         mvisualitzafila = []
         for j in range(0, len(hores)):
             #Posem els valors
-            alumn: AlumneMemoria = alumnes[i]
+            #alumn: AlumneMemoria = alumnes[i]
+            alumn = alumnes[i]
             idAlumne = str(alumn.id)
             idHora = str(hores[j].id)
 
-            horesXAlumne: dict = mah[idAlumne]
+            horesXAlumne = mah[idAlumne]
             #import ipdb; ipdb.set_trace()
             if (not idHora in horesXAlumne):
                 mvisualitzafila.append(None)
